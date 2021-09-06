@@ -1,0 +1,21 @@
+{
+  "name": "famous-paintings-api",
+  "version": "1.0.0",
+  "description": "API/ Backend repository for Backend Project at Digital Career Institute",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FBW-48-2-AJS-Backend-Project/famous-paintings-api.git"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FBW-48-2-AJS-Backend-Project/famous-paintings-api/issues"
+  },
+  "homepage": "https://github.com/FBW-48-2-AJS-Backend-Project/famous-paintings-api#readme"
+}
