@@ -4,6 +4,7 @@
   "description": "API/ Backend repository for Backend Project at Digital Career Institute",
   "main": "index.js",
   "scripts": {
+    "seed": "node seed/seed.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +20,8 @@
   },
   "homepage": "https://github.com/FBW-48-2-AJS-Backend-Project/famous-paintings-api#readme",
   "dependencies": {
+    "faker": "^5.5.3",
+    "http-errors": "^1.8.0",
     "mongoose": "^5.13.8"
   }
 }
