@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/FBW-48-2-AJS-Backend-Project/famous-paintings-api/issues"
   },
-  "homepage": "https://github.com/FBW-48-2-AJS-Backend-Project/famous-paintings-api#readme"
+  "homepage": "https://github.com/FBW-48-2-AJS-Backend-Project/famous-paintings-api#readme",
+  "dependencies": {
+    "mongoose": "^5.13.8"
+  }
 }
