@@ -22,6 +22,9 @@ const PaintingSchema = new Schema({
         type: String,
         required: true
     }
+}, {
+    versionKey: false,
+    timestamps: true
 })
 
 const Painting = model('Painting', PaintingSchema);
