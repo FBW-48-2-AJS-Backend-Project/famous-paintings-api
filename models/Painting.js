@@ -3,7 +3,7 @@ const { Schema, model } = mongoose;
 
 const PaintingSchema = new Schema({
     cover: {
-        type: Image,
+        type: String,
         required: true
     },
     title: {
