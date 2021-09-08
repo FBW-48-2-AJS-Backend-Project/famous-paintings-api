@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 const app = express();
 const port = 5000;
 import paintingRouter from './routes/paintingRouter.js';
+import cartRouter from './routes/cartRouter.js';
 import createError from 'http-errors';
 import cors from 'cors';
 
@@ -29,6 +30,8 @@ app.get('/', (req, res) => {
 })
 
 app.use('/paintings', paintingRouter)
+
+app.use('/cart', cartRouter);
 
 app.listen(port, () => {
     console.log(`Example app listen http://localhost:${port}`)

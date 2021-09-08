@@ -5,6 +5,7 @@ export const getAllPaintings = async (req, res, next) => {
     try{
         const paintings = await Painting.find();
         res.json(paintings);
+        if(!paintings) throw new createError (404, `Looks like no paintings are found.`)
     }
     catch(err){
         next(err)
