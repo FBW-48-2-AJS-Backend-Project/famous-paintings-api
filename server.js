@@ -4,6 +4,7 @@ const app = express();
 const port = 5000;
 import paintingRouter from './routes/paintingRouter.js';
 import cartRouter from './routes/cartRouter.js';
+import userRouter from './routes/userRouter.js'
 import createError from 'http-errors';
 import cors from 'cors';
 
@@ -29,9 +30,11 @@ app.get('/', (req, res) => {
     res.send(`Welcome to the painting store`)
 })
 
-app.use('/paintings', paintingRouter)
+app.use('/paintings', paintingRouter);
 
 app.use('/cart', cartRouter);
+
+app.use('/users', userRouter);
 
 app.listen(port, () => {
     console.log(`Example app listen http://localhost:${port}`)

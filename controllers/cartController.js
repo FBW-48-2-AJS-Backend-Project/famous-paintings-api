@@ -6,7 +6,7 @@ import Painting from '../models/Painting.js';
 
 export const createCart = async (req, res, next) => {
     try{
-        const cartTotal = req.body.reduce((accumulator, item) => {
+        const cartTotal = req.body.paintings.reduce((accumulator, item) => {
             return accumulator + item.price
         }, 0);
         console.log(cartTotal);
