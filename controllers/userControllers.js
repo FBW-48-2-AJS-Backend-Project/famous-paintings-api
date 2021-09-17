@@ -11,7 +11,7 @@ export const createUser = async (req, res, next) => {
     catch (err){
         next(err)
     }
-}
+};
 
 export const getAllUsers = async (req, res, next) => {
     try {
@@ -21,13 +21,29 @@ export const getAllUsers = async (req, res, next) => {
     } catch (error) {
         next( error );
     }
-}
+};
 
 export const getOneUser = async (req, res, next) => {
     try {
         const { id } = req.params;
         const user = await User.findById( id );
         if(!user) throw new createError(404, `No user with id --> ${id} was found`);
+        res.json( user );
+    } catch (error) {
+        next( error );
+    }
+};
+
+export const updateUser = async (req, res, next) => {
+    try {
+        const { id } = req.params;
+        const newData = req.body;
+        const user = await User.findByIdAndUpdate(
+            id,
+            newData,
+            { new: true }
+        );
+        if (!user) throw new createError(404, `No user with id --> ${id} was found`);
         res.json( user );
     } catch (error) {
         next( error );
